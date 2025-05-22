@@ -4,7 +4,7 @@ import Cookies from "js-cookie";
 
 export async function getUsers() {
   const jwtToken = Cookies.get("token");
-  const response = await fetch("http://localhost:3001/664/users", {
+  const response = await fetch("http://localhost:3333/users", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -20,7 +20,7 @@ export async function getUsers() {
 
 export async function deleteUser(id: unknown) {
   const jwtToken = Cookies.get("token");
-  const response = await fetch(`http://localhost:3001/664/users/${id}`, {
+  const response = await fetch(`http://localhost:3333/users/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -36,7 +36,7 @@ export async function deleteUser(id: unknown) {
 
 export async function updateUser(user: user) {
   const jwtToken = Cookies.get("token");
-  const response = await fetch(`http://localhost:3001/664/users/${user.id}`, {
+  const response = await fetch(`http://localhost:3333/users/${user.id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

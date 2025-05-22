@@ -1,7 +1,7 @@
 import { user } from "@/components/userTable";
 
 export async function postLogin(data: { email: string; password: string }) {
-  const response = await fetch("http://localhost:3001/login", {
+  const response = await fetch("http://localhost:3333/sessions", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
@@ -14,7 +14,7 @@ export async function postLogin(data: { email: string; password: string }) {
 }
 
 export async function postregister(data: user) {
-  const response = await fetch("http://localhost:3001/users", {
+  const response = await fetch("http://localhost:3333/users", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
